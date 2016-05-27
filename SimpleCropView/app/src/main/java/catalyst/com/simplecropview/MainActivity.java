@@ -1,6 +1,6 @@
 package catalyst.com.simplecropview;
 
-
+//add the following import statements after the package declaration
 import android.app.Activity;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
@@ -16,9 +16,11 @@ import android.widget.Toast;
 
 public class MainActivity extends Activity implements OnClickListener {
 
+    //to Launch the Camera add the instance variables
     final int CAMERA_CAPTURE=1;
     //keep track of cropping intent
     final int PIC_CROP = 2;
+    //store the URI of the captured image
     private Uri picUri;
     Button captureBtn;
 
@@ -27,20 +29,23 @@ public class MainActivity extends Activity implements OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+       // calling the superclass method and setting the content layout
         captureBtn = (Button) findViewById(R.id.capture_btn);
         captureBtn.setOnClickListener(this);
 
     }
-
+    //provide an "onClick" method to user will press the button to launch the camera
     @Override
     public void onClick(View v) {
         if (v.getId()== R.id.capture_btn) {
+            //code to launch the camera Intent, including it in a "try" block
             try {
                 //use standard intent to capture an image
                 Intent captureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
                 //we will handle the returned data in onActivityResult
                 startActivityForResult(captureIntent, CAMERA_CAPTURE);
             }
+
             catch(Exception ex){
                 //display an error message
                 String errorMessage = "Whoops - your device doesn't support capturing images!";
