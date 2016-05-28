@@ -20,12 +20,6 @@ import org.apache.http.impl.client.DefaultHttpClient;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 
-//import cz.msebera.android.httpclient.client.HttpClient;
-//import cz.msebera.android.httpclient.client.ResponseHandler;
-//import cz.msebera.android.httpclient.client.methods.HttpGet;
-//import cz.msebera.android.httpclient.impl.client.BasicResponseHandler;
-//import cz.msebera.android.httpclient.impl.client.DefaultHttpClient;
-
 public class MainActivity extends Activity {
 
     TextView name,emailid,loginid,password;
