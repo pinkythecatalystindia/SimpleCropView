@@ -12,6 +12,10 @@ import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.DefaultHttpClient;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.util.Log;
@@ -19,6 +23,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.app.Activity;
 import android.widget.Toast;
+
 
 public class MainActivity extends Activity {
 
