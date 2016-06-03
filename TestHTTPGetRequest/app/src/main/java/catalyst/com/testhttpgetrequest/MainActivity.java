@@ -10,6 +10,10 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.ResponseHandler;
@@ -84,16 +88,16 @@ public class MainActivity extends Activity {
                         loginid.setText(SetServerString);
                         password.setText(SetServerString);
                     } catch (Exception ex) {
-//                        name.setText("Fail!");
-//                        emailid.setText("Fail!");
-//                        loginid.setText("Fail!");
-//                        password.setText("Fail!");
+                        name.setText("Fail!");
+                        emailid.setText("Fail!");
+                        loginid.setText("Fail!");
+                        password.setText("Fail!");
                     }
                 } catch (UnsupportedEncodingException ex) {
-//                    name.setText("Fail");
-//                    emailid.setText("Fail");
-//                    loginid.setText("Fail");
-//                    password.setText("Fail");
+                    name.setText("Fail");
+                    emailid.setText("Fail");
+                    loginid.setText("Fail");
+                    password.setText("Fail");
                 }
             }
         });

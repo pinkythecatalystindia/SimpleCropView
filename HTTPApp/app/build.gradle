@@ -20,9 +20,13 @@ android {
     }
 }
 
-    dependencies {
-        compile fileTree(dir: 'libs', include: ['*.jar'])
-        testCompile 'junit:junit:4.12'
-        compile 'com.android.support:appcompat-v7:23.4.0'
-
-    }
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.4.0'
+    compile 'com.google.code.gson:gson:2.3.1'
+    compile files('libs/android-json-rpc.jar')
+    compile files('libs/httpclient-4.5.jar')
+    compile files('libs/httpclient-cache-4.5.jar')
+    compile files('libs/httpclient-win-4.5.jar')
+}

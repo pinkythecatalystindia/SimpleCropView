@@ -48,10 +48,10 @@ public class MainActivity extends Activity {
         }
 
         // show response on the EditText etResponse
-        etResponse.setText(GET("http://developer.codeniques.com/testfile.php"));
+//        etResponse.setText(GET("http://shoppingmazza.com/skoolstar/securegirls/welcome/saveall"));
 
         // call AsynTask to perform network operation on separate thread
-//        new HttpAsyncTask().execute("http://hmkcode.com/examples/index.php");
+        new HttpAsyncTask().execute("http://hmkcode.com/examples/index.php");
     }
 
     public static String GET(String url){

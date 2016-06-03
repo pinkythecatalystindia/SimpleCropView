@@ -6,6 +6,7 @@ import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.view.View;
@@ -37,6 +38,9 @@ public class MainActivity extends Activity implements OnClickListener {
     //provide an "onClick" method to user will press the button to launch the camera
     @Override
     public void onClick(View v) {
+//        String serverURL = "http://developer.codeniques.com/securegirls/";
+//        new LongOperation().execute(serverURL);
+
         if (v.getId()== R.id.capture_btn) {
             //code to launch the camera Intent, including it in a "try" block
             try {
@@ -54,6 +58,9 @@ public class MainActivity extends Activity implements OnClickListener {
             }
         }
     }
+
+
+
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (resultCode == RESULT_OK) {
             //user is returning from capturing an image using the camera
@@ -88,8 +95,8 @@ public class MainActivity extends Activity implements OnClickListener {
             cropIntent.putExtra("aspectX", 1);
             cropIntent.putExtra("aspectY", 1);
             //indicate output X and Y
-            cropIntent.putExtra("outputX", 256);
-            cropIntent.putExtra("outputY", 256);
+            cropIntent.putExtra("outputX", 300);
+            cropIntent.putExtra("outputY", 350);
             //retrieve data on return
             cropIntent.putExtra("return-data", true);
             //start the activity - we handle returning in onActivityResult
